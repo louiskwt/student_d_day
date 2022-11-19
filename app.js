@@ -12,7 +12,7 @@ app.use(pino);
 
 app.get("/", (req, res) => {
   const ans = "No";
-  res.render("pages/index", {
+  res.status(200).render("pages/index", {
     ans,
   });
 });

@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "test": "jest --testTimeout=10000"
   },
   "author": "LT",
   "license": "ISC",
@@ -15,7 +16,15 @@
     "pino-http": "^8.2.1"
   },
   "devDependencies": {
+    "jest": "^29.3.1",
     "nodemon": "^2.0.20",
-    "pino-pretty": "^9.1.1"
+    "pino-pretty": "^9.1.1",
+    "supertest": "^6.3.1"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
   }
 }
